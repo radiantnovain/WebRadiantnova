@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/radiantn/public_html/public/index.php
+    - export DEPLOYPATH=/home/radiantn/public_html/public/index.html
     - /bin/cp -R * $DEPLOYPATH
