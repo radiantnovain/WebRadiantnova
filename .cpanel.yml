@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/radiantn/repositories/radiantnova/
-    - /bin/cp -R images $DEPLOYPATH  
+    - export DEPLOYPATH=/home/radiantn/public_html
+    - /bin/cp -R * $DEPLOYPATH  
