@@ -1,5 +1,10 @@
----
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/radiantn/public_html
+    - export DEPLOYPATH=/home/radiantn/public_html/public/index.php
+    - echo "Deployment path: $DEPLOYPATH"
     - /bin/cp -R * $DEPLOYPATH
+    - echo "Files copied successfully"
+    - cd /home/radiantn/public_html/public
+    - echo "Moved to project directory"
+    - composer update
+    - echo "Composer update completed"
