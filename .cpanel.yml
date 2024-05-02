@@ -1,5 +1,10 @@
----
-deployment:
+deploy:
   tasks:
-    - export DEPLOYPATH=/home/radiantn/public_html/public/index.html
-    - /bin/cp -R * $DEPLOYPATH
+    - name: Copy files to deployment path
+      command: /bin/cp -R * /home/radiantn/public_html/public/index.php
+
+    - name: Move to project directory
+      command: cd /home/radiantn/public_html/public
+
+    - name: Update composer dependencies
+      command: composer update
